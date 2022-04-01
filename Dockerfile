@@ -5,7 +5,7 @@
 ## docker run -d -it --cap-add NET_ADMIN --cap-add SYS_PTRACE --security-opt seccomp=unconfined -h hso --name hso-ctf-active hso-ctf
 
 FROM ubuntu:latest
-LABEL org.opencontainers.image.source="https://github.com/victorazzam/hso-ctf"
+LABEL org.opencontainers.image.source https://github.com/victorazzam/hso-ctf
 
 # Update system and install necessary packages
 RUN dpkg --add-architecture i386 && apt-get update -qq && DEBIAN_FRONTEND=noninteractive TZ=Europe/Berlin apt-get install -yq sudo libc6:i386 libncurses5:i386 libstdc++6:i386 build-essential gdb vim curl python3-pip netcat openconnect
