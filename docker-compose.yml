@@ -1,0 +1,11 @@
+version: '3'
+services:
+  hso-ctf:
+    build: .
+    hostname: hso
+    container_name: hso-ctf-active
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - NET_ADMIN
+      - SYS_PTRACE

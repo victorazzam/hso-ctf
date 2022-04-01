@@ -1,0 +1,17 @@
+
+┬ ┬┌─┐┬  ┌─┐┌─┐┌┬┐┌─┐  ┌┬┐┌─┐  ╦ ╦╔═╗╔═╗   ╔═╗╔╦╗╔═╗
+│││├┤ │  │  │ ││││├┤    │ │ │  ╠═╣╚═╗║ ║───║   ║ ╠╣ 
+└┴┘└─┘┴─┘└─┘└─┘┴ ┴└─┘   ┴ └─┘  ╩ ╩╚═╝╚═╝   ╚═╝ ╩ ╚
+
+To connect to the Hochschule Offenburg network, run:
+ sudo openconnect --background --authgroup 2 -u YOUR_HSO_USERNAME vpn.hs-offenburg.de
+
+To disconnect, run:
+ sudo pkill -SIGINT openconnect
+
+If you see some messages after you (dis)connect, just press enter.
+
+Your sudo credentials are ctf:ctf
+
+Happy hacking! :D
+
