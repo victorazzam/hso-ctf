@@ -1,6 +1,6 @@
 # HSO CTF Docker Image
 
-Docker image to connect to Offenburg University's internal CTF platform and solve challenges.
+Docker image to connect to the Offenburg University internal CTF platform and solve challenges.
 
 It is based on the latest LTS (Long Term Support) release of Ubuntu, which is **20.04 Focal Fossa** as of April 1st 2022.
 
