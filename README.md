@@ -1,6 +1,6 @@
 # HSO CTF Docker Image
 
-A loaded Docker image to connect to the Hochschule Offenburg internal CTF platform and interact with the challenges.
+Docker image to connect to Offenburg University's internal CTF platform and solve challenges.
 
 It is based on the latest LTS (Long Term Support) release of Ubuntu, which is **20.04 Focal Fossa** as of April 1st 2022.
 
@@ -11,6 +11,7 @@ Included are some helpful tools:
 - **Python 3** - the superior Python 2 successor.
 - **Vim** - text editor (you can get emacs if you really want... <sub><sup>[or, god forbid, nano](https://i.redd.it/fuaws1hsssn51.jpg)</sup></sub>)
 - **Curl** - simple and configurable HTTP client.
+- **Netcat** - for easy interaction with sockets on any port.
 
 You may wish to download other programs on your hacking journey. Install them via:
 
@@ -29,7 +30,7 @@ $ docker run -d -it --cap-add NET_ADMIN --cap-add SYS_PTRACE --security-opt secc
 ```
 
 Read further for an explanation of all the options.
-
+<hr>
 To build this image from source, download this repository, `cd` into it and run:
 
 ```console
@@ -76,22 +77,22 @@ $ docker exec -it hso-ctf-active bash
 ctf@hso:~$
 ```
 
-You may wish to host your container in the cloud and (after allowing port 2222 on your firewall) connect to it from anywhere.
+You may wish to host your container in the cloud and (after allowing the necessary port on your firewall) connect to it from anywhere.
 
 #### If you go cloud, make sure to configure passwordless key-enabled SSH access to avoid a huge security risk!
 
 ```console
 $ ssh ctf@HOSTNAME -p 2222
 The authenticity of host '[HOSTNAME]:2222 ([HOSTNAME]:2222)' can't be established.
-#ECDSA key fingerprint is SHA256:KmFUWH/lf/Vl4aJ/ctfdLH60V2KBbTOP2hbRZLMRgW4.
-#Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-#Warning: Permanently added '[HOSTNAME]:2222' (ECDSA) to the list of known hosts.
-#ctf@localhost's password:
+ECDSA key fingerprint is SHA256:KmFUWH/lf/Vl4aJ/ctfdLH60V2KBbTOP2hbRZLMRgW4.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[HOSTNAME]:2222' (ECDSA) to the list of known hosts.
+ctf@localhost's password:
 #...welcome message here...
 ctf@hso:~$
 ```
 
-Once you're in, **change your password** from `ctf` to something reasonably more secure:
+In any event, once you're in, **change your password** from `ctf` to something reasonably more secure:
 
 ```console
 ctf@hso:~$ passwd
