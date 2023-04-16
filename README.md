@@ -7,7 +7,7 @@ It is based on the latest LTS (Long Term Support) release of Ubuntu, which is **
 Included are some helpful tools:
 
 - **CTFd.py** - [a useful script](https://github.com/victorazzam/stash/blob/master/Scripts/ctfd.py) I wrote to track and download all challenges from any [CTFd](https://github.com/ctfd/ctfd) instance.
-- **Gdb** - the infamously simplistic GBU debugger (I recommend extensions like PEDA).
+- **Gdb** - the infamously simplistic GNU debugger (I recommend extensions like PEDA).
 - **Python 3** - the superior Python 2 successor.
 - **Vim** - text editor (you can get emacs if you really want... <sub><sup>[or, god forbid, nano](https://i.redd.it/fuaws1hsssn51.jpg)</sup></sub>)
 - **Curl** - simple and configurable HTTP client.
